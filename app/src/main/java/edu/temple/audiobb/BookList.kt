@@ -1,8 +1,12 @@
 package edu.temple.audiobb
 
-class BookList (val bList:MutableList<Book>) {
+import java.io.Serializable
 
-    fun add(book:Book){
+class BookList : Serializable {
+
+    private val bList = ArrayList<Book>()
+
+    fun add(book: Book){
         bList.add(book)
     }
 
@@ -10,8 +14,8 @@ class BookList (val bList:MutableList<Book>) {
         bList.remove(book)
     }
 
-    fun get(num:Int):Book {
-        return bList.get(num)
+    fun get(index:Int):Book {
+        return bList[index]
     }
 
     fun size():Int {

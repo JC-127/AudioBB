@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,18 +16,35 @@ import androidx.recyclerview.widget.RecyclerView
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class ListFragment : Fragment(), bookAdapter.ClickListener {
-    // TODO: Rename and change types of parameters
-    private var title:Array<String>? = null
-    private var author: Array<String>? = null
-    private lateinit var adaptor: bookAdapter
-    lateinit var recyView: RecyclerView
+class ListFragment : Fragment() {
+
+    lateinit var bList: BookList
+    lateinit var layout: View
+    lateinit var bListView: RecyclerView
+
+    companion object {
+        @JvmStatic
+        fun newInstance(bkList: BookList): ListFragment {
+
+            val frag = ListFragment().apply {
+                bList = bkList
+                arguments = Bundle().apply {
+                    putSerializable("bookList", bList)
+                }
+            }
+            return frag
+        }
+    }
+
+    interface DoubleLayout {
+        fun selectionMade()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
-            title = it.getStringArray(ARG_PARAM1)
-            author = it.getStringArray(ARG_PARAM2)
+            bList = it.getSerializable("bookList") as BookList
         }
     }
 
@@ -33,38 +52,27 @@ class ListFragment : Fragment(), bookAdapter.ClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val view = inflater.inflate(R.layout.fragment_list, container, false)
-        initRecyclerView(view)
-        return view
-
+        // Inflate the layout for this fragment
+        layout = inflater.inflate(R.layout.fragment_list, container, false)
+        return layout
     }
 
-    private fun initRecyclerView(view:View) {
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recView)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
-        adaptor = bookAdapter(title!!, author!!, this)
-        recyclerView.adapter = adaptor
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    companion object {
-
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(title: Array<String>, author: Array<String>) =
-            ListFragment().apply {
-                arguments = Bundle().apply {
-                    putStringArray(ARG_PARAM1, title)
-                    putStringArray(ARG_PARAM2, author)
-                }
-            }
-
-        fun onItemClick(string: String) {
-            TODO ("NEEDS TO BE IMPLEMENTED")
+        bListView = layout.findViewById(R.id.recView)
+        bListView.layoutManager = GridLayoutManager(requireContext(), 2)
+        val adapter = bookAdapter(requireContext(), bList) {
+            updateModel(bListView.getChildAdapterPosition(it))
         }
+        bListView.adapter = adapter
     }
 
-    override fun onItemClick(string: String) {
-        TODO("Not yet implemented")
+    private fun updateModel(index: Int) {
+        ViewModelProvider(requireActivity())
+            .get(bViewModel::class.java)
+            .setSelectedBook(bList.get(index))
+        (requireActivity() as DoubleLayout).selectionMade()
     }
+
 }
