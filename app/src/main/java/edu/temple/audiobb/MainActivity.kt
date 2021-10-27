@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentContainerView
 import androidx.lifecycle.ViewModelProvider
+import edu.temple.audiobb.ListFragment.Companion.newInstance
 
 class MainActivity : AppCompatActivity(), ListFragment.DoubleLayout {
 
