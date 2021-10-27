@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jcmer/AndroidStudioProjects/AudioBB/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/jcmer/AndroidStudioProjects/AudioBB/app/src/main/res/layout-large-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/jcmer/AndroidStudioProjects/AudioBB/app/src/main/res/layout-large/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/jcmer/AndroidStudioProjects/AudioBB/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/jcmer/AndroidStudioProjects/AudioBB/app/src/main/res/layout/fragment_details.xml" value="0.22" />
         <entry key="..\:/Users/jcmer/AndroidStudioProjects/AudioBB/app/src/main/res/layout/fragment_fragment1.xml" value="0.22" />
