@@ -3,28 +3,28 @@
 
     <string-array name="bNames">
         <item>The Five People You Meet In Heaven</item>
-        <item>Dante's Inferno</item>
+        <item>Inferno</item>
         <item>The Book of Enoch</item>
-        <item></item>
-        <item>Frankenstein</item>
-        <item>Hamlet</item>
-        <item>Things Fall Apart</item>
-        <item>Journey to the West</item>
-        <item>The Art of War</item>
-        <item>The Lord of the Rings</item>
+        <item>The Things They Carried</item>
+        <item>Aeneid</item>
+        <item>The Place of The Damned</item>
+        <item>Vathek</item>
+        <item>Huis Clos "No Exit"</item>
+        <item>Paradise Lost</item>
+        <item>Heaven and Hell</item>
     </string-array>
 
     <string-array name="bAuthors">
-        <item>Gabriel García Márquez</item>
-        <item>Fyodor Dostoevsky</item>
-        <item>George Orwell</item>
-        <item>Aldous Huxley</item>
-        <item>Mary Shelley</item>
-        <item>William Shakespeare</item>
-        <item>Chinua Achebe</item>
-        <item>Wu Cheng\'en</item>
-        <item>Sun Tzu</item>
-        <item>J.R.R Tolkien</item>
+        <item>Mitch Albom</item>
+        <item>Dante Alighieri</item>
+        <item>Enoch</item>
+        <item>Tim O'Brien</item>
+        <item>Virgil</item>
+        <item>Jonathan Swift</item>
+        <item>William Beckford</item>
+        <item>Jean-Paul Sartre</item>
+        <item>John Milton</item>
+        <item>Kristen Ashley</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
