@@ -20,4 +20,10 @@ class BookList : Serializable {
 
     fun size() = bList.size
 
+
+    //added for assignment 8
+    fun getID(id:Int):Book{
+        return bList[id];
+    }
+
 }
