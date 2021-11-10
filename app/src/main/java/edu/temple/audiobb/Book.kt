@@ -2,6 +2,6 @@ package edu.temple.audiobb
 
 import java.io.Serializable
 
-data class Book(val title: String, val author: String, val bID: String, val coverURL: String ) : Serializable {
+data class Book(val title: String, val author: String, val bID: Int, val coverURL: String ) : Serializable {
 
 }

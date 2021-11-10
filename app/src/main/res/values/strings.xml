@@ -1,44 +1,6 @@
 <resources>
     <string name="app_name">AudioBB</string>
-
-    <string-array name="bNames">
-        <item>The Five People You Meet In Heaven</item>
-        <item>Inferno</item>
-        <item>The Book of Enoch</item>
-        <item>The Things They Carried</item>
-        <item>Aeneid</item>
-        <item>The Place of The Damned</item>
-        <item>Caliph Vathek</item>
-        <item>Huis Clos "No Exit"</item>
-        <item>Paradise Lost</item>
-        <item>Heaven and Hell</item>
-    </string-array>
-
-    <string-array name="bAuthors">
-        <item>Mitch Albom</item>
-        <item>Dante Alighieri</item>
-        <item>Enoch</item>
-        <item>Tim OBrien</item>
-        <item>Virgil</item>
-        <item>Jonathan Swift</item>
-        <item>William Beckford</item>
-        <item>Jean-Paul Sartre</item>
-        <item>John Milton</item>
-        <item>Kristen Ashley</item>
-    </string-array>
-
-    <string-array name="bID">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-    </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialogCancel">Cancel</string>
+    <string name="dialogSearch">Search</string>
+    <string name="searchDirections">Search Book Title or Author</string>
 </resources>

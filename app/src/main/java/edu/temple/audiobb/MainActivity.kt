@@ -1,5 +1,4 @@
 package edu.temple.audiobb
-package edu.temple.audiobb
 
 import android.app.Activity
 import android.app.Dialog
@@ -83,7 +82,7 @@ class MainActivity : AppCompatActivity(), ListFragment.DoubleLayout {
         super.onBackPressed()
     }
 
-    override fun bookSelected() {
+    fun bookSelected() {
         // Perform a fragment replacement if we only have a single container
         // when a book is selected
 
@@ -94,5 +93,9 @@ class MainActivity : AppCompatActivity(), ListFragment.DoubleLayout {
                 .addToBackStack(null)
                 .commit()
         }
+    }
+
+    override fun selectionMade() {
+        TODO("Not yet implemented")
     }
 }
